@@ -30,7 +30,7 @@ abstract class ReportBuildResultTask extends DefaultTask {
         def status = srv.packageDownloadUrl.present ? "1" : "2"
         def packageDownloadUrl = srv.packageDownloadUrl.getOrElse("")
         def buildId = config.id.value
-        def serverApi = "$server${config.api.value}"
+        def serverApi = config.api.value
         def params = new JsonBuilder(["id"                : "${buildId}",
                                       "packageDownloadUrl": "${packageDownloadUrl}",
                                       "status"            : "$status"]).toPrettyString()
