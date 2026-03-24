@@ -29,7 +29,7 @@ gradlePlugin {
     // Define the plugin
     plugins {
         'android-build' {
-            id = 'com.github.dev-xiaoyan.android-build'
+            id = 'com.github.skauyou.android-build'
             implementationClass = 'com.github.star.AndroidBuildPlugin'
         }
     }
